@@ -1,0 +1,51 @@
+/* all items */
+* {
+  background-color: white;
+  font-family: Arial;
+}
+
+/* nav bar */
+nav > ul {
+  position: static;
+  width: 100%;
+  list-style-type: none;
+  border: 2px solid black;
+  background-color: white;
+  margin: 1em;
+  padding: 1em;
+}
+
+/* get the nav bar in a horizontal line */
+nav > ul > li {
+  display: inline;
+}
+
+/* header */
+header {
+  position: static;
+  top: 0;
+  border: 2px solid black;
+  background-color: white;
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+}
+
+/* main section */
+main {
+  position: static;
+  border: 2px solid black;
+  background-color: white;
+  margin: 1em;
+  padding: 1em;
+}
+
+/* footer bar */
+footer {
+  position: static;
+  width: 100%;
+  border: 2px solid black;
+  background-color: white;
+  margin: 1em;
+  padding: 1em;
+}
