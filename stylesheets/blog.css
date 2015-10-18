@@ -1,0 +1,18 @@
+main h2 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+main h4 {
+  font-style: italic;
+}
+
+main h6 {
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+
+main > p:first-of-type::first-letter {
+  font-size: 200%;
+  color: #284907;
+  }

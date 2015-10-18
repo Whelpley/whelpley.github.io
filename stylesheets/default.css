@@ -1,16 +1,22 @@
+/* Palette Guide:
+Tan - #d8caa8
+Light Green - #5c832f
+Green - #284907
+Brown - #382513
+Blue-Gray - #363942
+*/
+
 /* all items */
 * {
-  background-color: white;
-  font-family: Arial;
+  background-color: #d8caa8;
+  font-family: Helvetica;
+  color: #363942;
 }
 
 /* nav bar */
 nav > ul {
-  position: static;
-  width: 100%;
   list-style-type: none;
-  border: 2px solid black;
-  background-color: white;
+  border: 2px solid #382513;
   margin: 1em;
   padding: 1em;
 }
@@ -18,34 +24,64 @@ nav > ul {
 /* get the nav bar in a horizontal line */
 nav > ul > li {
   display: inline;
+  margin-left: 2em;
 }
 
 /* header */
 header {
-  position: static;
-  top: 0;
-  border: 2px solid black;
-  background-color: white;
+  border: 2px solid #382513;
   text-align: center;
   margin: 1em;
   padding: 1em;
 }
 
+header h1 {
+  font-size: 3em;
+}
+
+header h4 {
+  font-style: italic;
+}
+
 /* main section */
 main {
-  position: static;
-  border: 2px solid black;
-  background-color: white;
+  border: 2px solid #382513;
   margin: 1em;
   padding: 1em;
 }
 
+main h2 {
+  font-size: 2em;
+}
+
+/*image formatting - size format, box up, and shift right*/
+main img {
+  float: right;
+  height: 20em;
+  width: 20em;
+  padding: 1px;
+  border: 1px solid #382513;
+}
+
+/*blog list*/
+main li {
+  margin-bottom: 1em;
+}
+
 /* footer bar */
 footer {
-  position: static;
   width: 100%;
-  border: 2px solid black;
-  background-color: white;
+  border: 2px solid #382513;
   margin: 1em;
   padding: 1em;
+  font-style: italic;
+}
+
+/* color of links */
+a:link {
+  color: #5c832f;
+}
+
+a:visited {
+  color: #284907;
 }
