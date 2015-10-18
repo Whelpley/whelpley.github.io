@@ -1,0 +1,37 @@
+/* examples of positioning in CSS */
+
+#static {
+  position: static;
+  height: 100px;
+  top: 200px;
+  left: 300px; /*since this is Static, it will not be moved*/
+  width: 100px;
+  background-color: green;
+}
+
+#relative {
+  position: relative;
+  top: 200px;
+  left: 300px;
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+}
+
+#fixed {
+  position: fixed;
+  top: 0px;
+  left: 50px;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+
+#absolute {
+  position: absolute;
+  top: 400px;
+  left: 200px;
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+}
