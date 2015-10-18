@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/default.css"/>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css"/>
+  <title>Doge's Technical Blog: Positioning</title>
+</head>
+
+<body>
+
+  <div>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Links</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div>
+    <header>
+      <h1>The Doge's Garden</h1>
+      <h4>How a doge learns to code</h4>
+    </header>
+  </div>
+
+  <div>
+    <main>
+      <h2>Positioning in CSS</h2>
+      <h4>The difference between Static, Absolute, Fixed, and Relative positioning</h4>
+      <h6>October 18, 2015</h6>
+
+      <p>In this past week's studies for Dev Bootcamp, I received a crash course in CSS. CSS stands for Cascading Style Sheets, and it is the language that is used to create a styling guide for an HTML document on the World Wide Web.</p>
+      <p>One of the more difficult concepts I grappled with this week was Positioning: the rules that govern where an HTML object appears in the screen. After coming to an understanding of their properties and differences, I have chose to share my knowlege via this post.</p>
+      <p>To begin with, I will further explain the relation between CSS and HTML. An HTML document is composed of "elements", which are the individual components of a page, as defined by its creator. The HTML document may include a link to a CSS "stylesheet", where elements may be picked out and have a "property" and "value" applied to them.</p>
+      <p>There is a large range of Properties one may apply to the elements, which can change the font size, borders, colors, and many other factors. In this essay, I will stick to covering the Position property, which governs where the element will appear on a page. You may select one of four values for this property:</p>
+      <ol>
+      <li>Static: This is the default positioning value, which will be applied when no other is specified. This means that each element will appear in the order it appears in the HTML document.</li>
+      <li>Relative: When selected on its own, this position with work the same as Static. However, you may also apply additional properties (eg: top: 5px, bottom: 2em) to shift the element from where it would have appeared in Static. Of note, selecting this position will increase the element's "z-axis" value, which means it will appear on top of any Static element.</li>
+      <li>Absolute: when this position is selected, the element will start from the nearest parent element (one whch contains the element in question) with Absolute or Relative positioning, or the start of the document body if no such parent exists. The element may then be shifted with addition top:/bottom:/etc properties, as with Relative.</li>
+      <li>Fixed: This is the odd one of the bunch - when this property is selected, the element becomes fixed to a specific point in the browser window, so that as the page is scolled, that element remains in the same space. This one must be used carefully to avoid overlapping elements.</li>
+    </ol>
+    <p>I have drawn up <a href="pos_examples.html">an example</a> to demonstrate the differences in the code; you may refer to the style sheet <a href="positioning_examples.css">here</a>. The green box is Static, so while a top and left property shift is specified, it does not move from its original location. The blue box is Relative, and shifted to the bottom-right. The yellow box is Absolute, further down, and the red box is Fixed, which means it will stay in the same place no matter where the browser window is scrolled.</p>
+    <p>I hope this post helped clarify the subject of positioning in CSS. If you have any questions, I invite you to drop me an email!</p>
+    </main>
+  </div>
+
+  <div>
+    <footer>
+      <p>Questions? Comments? Concerns? <a href="mailto:whelpley@gmail.com">Email me</a></p>
+    </footer>
+  </div>
+
+</body>
+
+</html>
+
+<!--
+How was it to wireframe and create an HTML page with a pair?
+-Going through this process with a pair was useful in that we were able to check in with each other about the necessity of elements (ie: does this need a table now? nope!). Also very useful to have two brains for error-checking and looking up what tags do.
+
+
+Did you find wireframing to be helpful to your development process?
+-At our current level, I do not feel it is very useful, as it is easy to envision how a page will look from the code I develop for it. However, I do see how this will quickly become useful as a base skeletal reference when I start adding style elements and more complicated layouts.
+
+What did you and your pair decide made a good wireframe?
+-For this exercise, we decided to keep it as simple as possible, to respect both our current knowledge level and the time limit for the exercise. We had just 4 boxes, all in a column: page title, a navigation bar, the article text, and a footer with contact info.
+
+
+What new semantic elements did you learn about (if any) ?
+-I did not learn about any semantic elements for this exercise, but I did learn some structural ones:
+<nav> for the navigation bar section
+  <footer> for the contact info at the bottom
+    <article> for the main body
+
+-->
+
+</html>
