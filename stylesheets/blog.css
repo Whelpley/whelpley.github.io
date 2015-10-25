@@ -1,3 +1,11 @@
+/* Palette Guide:
+Tan - #d8caa8
+Light Green - #5c832f
+Green - #284907
+Brown - #382513
+Blue-Gray - #363942
+*/
+
 main h2 {
   font-size: 3em;
   font-weight: bold;
@@ -16,3 +24,19 @@ main > p:first-of-type::first-letter {
   font-size: 200%;
   color: #284907;
   }
+
+.snippet {
+  background-color: #5c832f;
+  border: 2px dotted #284907;
+  font-style: Courier;
+  color: white;
+}
+
+.snippet > h5 {
+  font-style: italic;
+  font-weight: normal;
+}
+
+code {
+  font-family: monospace;
+}
