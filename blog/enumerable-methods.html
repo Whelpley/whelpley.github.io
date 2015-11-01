@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/default.css"/>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css"/>
+  <title>Doge's Technical Blog: Enumerable Methods</title>
+  <link rel="icon" type="image/jpg" href="../imgs/doge_favicon.jpg">
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Links</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>The Doge's Garden</h1>
+    <h4>How a doge learns to code</h4>
+  </header>
+
+  <main>
+    <h2>Enumerable#cycle</h2>
+    <h4>An introduction and explanation</h4>
+    <h6>November 1, 2015</h6>
+
+    <p>This past week at Dev Bootcamp, Phase 0 was our second (out of three) covering Ruby. We dived deeper into Enumerable methods, which are methods that iteratively enact code blocks on data collections (such as arrays, hashes, and ranges).</p>
+    <p>In this blog post, I will cover one of the methods that I discovered this week: Enumerable#cycle. This is a method that iterates repeatedly over the elements of an enumerable, running infinitely unless a stop condition is acheived.</p>
+    <p>Implementing this method in an Arrays looks like this:</p>
+
+    <div class="snippet">
+      <code>
+        array_name.cycle(n) {|element| block}<br>
+      </code>
+    </div>
+
+    <p>When this method is called, the code in "block" is applied to each "element" in the array "n" times. If "n" is not specified (or set to nil), the method will infinitely iterate over the array, starting from the beginning after the end. The only other way to end the loop is to include a Break clause in the code block for a specific state.</p>
+    <p>With its potential for infinite loops, this method should be used with caution. In the example below, I will show how this can be used in combination with the methods .next and .rewind to access the months in a year:</p>
+
+    <div class="snippet">
+      <h3>Month Cycle</h3>
+      <h5>Here, I declare an array with the months in a year, then declare a variable "this_month". Each time Next is called on this_month, it returns the next one in the cycle. When Rewind is called, the cycle returns to the start: </h5>
+      <code>
+        months_of_year = %w{ Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec}<br>
+        this_month = months_of_year.cycle<br>
+        this_month.next<br>
+        # => "Jan"<br>
+        this_month.next<br>
+        # => "Feb"<br>
+        this_month.rewind<br>
+        this_month.next<br>
+        # => "Jan"<br>
+        <br>
+      </code>
+    </div>
+
+      <p>Enumerable#cycle works similarly for hashes, with a small adjustment to the syntax:</p>
+
+    <div class="snippet">
+      <code>
+        hash_name.cycle(n) {|key, value| block}<br>
+      </code>
+    </div>
+
+    <p>I would like to conclude today's post with a finer note about the Enumerable methods, which took a while to sink in this week: while they all provide means of enacting a block of code on a data structure, when they return when called is generally Nil. In order to make use of the results of the code block, they have to be "caught" by another variable in the code block. The example below should demonstrate:</p>
+
+   <div class="snippet">
+    <h3>Returns from Enumerable methods</h3>
+    <h5>First, I will declare an array, and then call a cycle method that acts on the array, but does not otherwise catch the results: </h5>
+    <code>
+      ex_array = [2, 4, 6]<br>
+      ex_array.cycle(2) {|x| x+2}<br>
+      # => nil<br>
+      <br>
+    </code>
+    <h5>Now, we funnel the results of the code block into something we can see:</h5>
+    <code>
+    ex_array = [2, 4, 6]<br>
+    ex_array.cycle(2) {|x| p x+2}<br>
+    # => 4<br>
+    # => 6<br>
+    # => 8<br>
+    # => 4<br>
+    # => 6<br>
+    # => 8<br>
+    <br>
+    </code>
+    </div>
+
+    <p>The above example points out one other feature of Enumerable#cycle, in that when the code is repeatedly called over a data structure, it returns to the original structure, rather than the results of the first (and subsequent) passes over the structure.</p>
+
+    <p>I hope this post helped illuminate this method, and that you might put it to use in your own coding adventures. See you next week!.</p>
+
+  </main>
+
+  <footer>
+    <p>Questions? Comments? Concerns? <a href="mailto:whelpley@gmail.com">Email me</a></p>
+  </footer>
+
+</body>
+
+</html>
+
+
+</html>
