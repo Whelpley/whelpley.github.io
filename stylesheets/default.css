@@ -85,3 +85,11 @@ a:link {
 a:visited {
   color: #284907;
 }
+
+/* Image formatting in lists */
+main li img {
+  width: 2em;
+  height: 2em;
+  float: none;
+  margin: 1em;
+}
