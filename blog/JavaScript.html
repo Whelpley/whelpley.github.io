@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/default.css"/>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css"/>
+  <title>Doge's Technical Blog</title>
+  <link rel="icon" type="image/jpg" href="../imgs/doge_favicon.jpg">
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="#">Links</a></li>
+      <li><a href="../projects/index.html">Projects</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>The Doge's Garden</h1>
+    <h4>How a doge learns to code</h4>
+  </header>
+
+  <main>
+    <h2>User prompts in JavaScript vs Ruby</h2>
+    <h4>A matter of information flow</h4>
+    <h6>November 15, 2015</h6>
+
+    <p>This past week, I had my first encounter with JavaScript, and gained a basic proficiency in its use. Since the previous three weeks were spent studying Ruby, much of what I learned was in comparison to that language. The pattern I often encountered was that something that had a simple, prebuilt solution in Ruby did not have such a counterpast in JS, necessitating the research or creation of new solutions.</p>
+    <p>Nowhere was this pattern more apparent than when I implemented user prompting in my solo project for this week. The project is a variation on a guessing game, which at various points in its execution, asks a user for input, and uses the results of that input to continue the program.</p>
+    <p>To implement a user prompt in Ruby is a simple matter, as seen below:</p>
+
+    <div class="snippet">
+      <h3>User input prompts in Ruby</h3>
+      <code>
+        name = "Steve"<br>
+        puts (name + " is my original name. What is my new name?")<br>
+        name = gets.chomp<br>
+        puts (name + " is my new name")<br>
+        <br>
+        => "Steve is my original name. What is my new name?"<br>
+      </code>
+       <h5>The program pauses and waits for user input...</h5>
+      <code>
+        => "[input] is my new name."<br>
+        <br>
+      </code>
+    </div>
+
+     <p>The command "gets" will pause the execution of the program to get the user input, and then resumes, using the result of the input.</p>
+    <p>Now, to implement this in JavaScript, things get funky. First off, the capability does not come pre-loaded into JS like with Ruby. Fortunately, by installing the package from <a href="https://github.com/flatiron/prompt">this project</a>, and adding two lines of code to associate files, you can acquire this capability, but care is required - it works much differently than Ruby.</p>
+    <p>Start my installing the package from the command line, in the directory you wish to use it:</p>
+    <div class="snippet">
+      <code>
+        npm install prompt<br>
+      </code>
+    </div>
+    <p>Now, let's try to implement the same code from above in JS:</p>
+    <div class="snippet">
+      <h3>User input prompts in JavaScript</h3>
+      <h5>A first attempt</h5>
+      <code>
+        // allows the use of the prompt functionality<br>
+        var prompt = require('prompt');<br>
+        //start the prompt<br>
+        prompt.start();<br><br>
+        var name = "Steve";<br><br>
+        console.log(name + " is my original name. What is my new name?");<br><br>
+        // this will prompt the user for a name, and send the result into the nested function<br>
+        prompt.get(['username'], function (err, result) {<br>
+          console.log(name + " \'s name just got changed to ");<br>
+          name = result.username;<br>
+          console.log(name);<br>
+        });<br><br>
+        console.log(name + " is my new name");<br>
+      </code>
+      <h5>What will the output look like?</h5>
+      <code>
+        =>Steve is my original name. What is my new name?<br>
+        =>prompt: username:  Steve is my new name<br>
+      </code>
+      <h5>Why is the new name string printing already? We continue on, and type in "Bill":</h5>
+      <code>
+        =>Bill<br>
+        =>Steve 's name just got changed to<br>
+        =>Bill<br>
+      </code>
+    </div>
+
+    <p>That's not what we wanted - what went wrong is that the flow of the program execution occurrs differently in JS than Ruby. In Ruby, the commands will be executed in the order they appear in the program, while in JS there is a logic that dictates the leveled execution of commands, which is not tied to the order they appear in the file. All of the top-level commands are executed first, then the prompt is called, and then everything that results from the prompt is executed.</p>
+    <p>To tie up this discussion, I will correct the code to respect the control flow of JS:</p>
+
+    <div class="snippet">
+      <code>
+        npm install prompt<br>
+      </code>
+    </div>
+    <p>Now, let's try to implement the same code from above in JS:</p>
+    <div class="snippet">
+      <h3>User input prompts in JavaScript</h3>
+      <h5>Take two</h5>
+      <code>
+        var prompt = require('prompt');<br>
+        prompt.start();<br><br>
+        var name = "Steve";<br><br>
+        console.log(name + " is my original name. What is my new name?");<br><br>
+        prompt.get(['username'], function (err, result) {<br>
+          console.log(name + " \'s name just got changed to ");<br>
+          name = result.username;<br>
+          console.log(name);<br>
+          console.log(name + " is my new name");<br>
+        });<br>
+      </code>
+      <h5>going for the output again:</h5>
+      <code>
+        =>Steve is my original name. What is my new name?<br>
+        =>prompt: username: <br>
+      </code>
+      <h5>typing in "Charlie":</h5>
+      <code>
+        =>Steve 's name just got changed to<br>
+        =>Charlie<br>
+        =>Charlie is my new name<br><br>
+      </code>
+    </div>
+
+    <p>There was not much changed above, but it makes a significant difference to the flow of information. Make sure to nest any functions that require the input from a user prompt are called after the prompt is invoked.</p>
+    <p>Thanks for reading, and I hoped I helped make user prompts in JavaScript more clear for you. Come back around next week!.</p>
+
+  </main>
+
+  <footer>
+    <p>Questions? Comments? Concerns? <a href="mailto:whelpley@gmail.com">Email me</a></p>
+  </footer>
+
+</body>
+
+</html>
+
