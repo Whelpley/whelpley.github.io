@@ -89,7 +89,24 @@ a:visited {
   border: 2px dotted #284907;
   color: white;
   padding: 1em;
-  width: 50%;
-  position: relative;
-  left: 9em;
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+.code_output {
+  color: yellow;
+}
+
+.code_comment {
+  color: #382513;
+}
+
+#intro {
+  width: 60%;
+  margin: auto;
+}
+
+div li {
+  text-align: left
 }
