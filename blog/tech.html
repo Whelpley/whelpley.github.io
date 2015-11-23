@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/default.css"/>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css"/>
+  <title>Doge's Technical Blog</title>
+  <link rel="icon" type="image/jpg" href="../imgs/doge_favicon.jpg">
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="#">Links</a></li>
+      <li><a href="../projects/index.html">Projects</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>The Doge's Garden</h1>
+    <h4>How a doge learns to code</h4>
+  </header>
+
+  <main>
+    <div>
+      <img src="../imgs/worms.jpg" alt="Open it ...">
+    </div>
+
+    <h2>Web Security</h2>
+    <h4>A non-comprehensive primer</h4>
+    <h6>November 22, 2015</h6>
+
+    <p>
+      <q>How do I stop being afraid? Know that there is no safety anywhere. There never was and there never will be. Stop looking for it. Live with a fierce intent to waste nothing of yourself or life.</q><br>
+      <i>Ann Shulgin</i>
+    </p>
+
+    <p>For this week's blog post, we were encouraged to go deeper in our research, and learn about a topic beyond the scope of our current studies. Even with that caveat in mind, I think I bit off more than I can chew with this topic. Nevertheless, I will  provide a high-level overview of some of the main issues around web security.</p>
+
+    <h3>It's dangerous out there.</h3>
+    <p>The woods are dark and deep. There are malicious people (and the programs they have created) on the internet, and there are myriad ways that an evil-minded person can violate the security of your web site.</p>
+
+    <h3>Are the bad guys out to get me?</h3>
+    <p>The good news is that not everyone has to worry. Security on the web is a relative thing, and the content of your site is a major factor. If you fit one or more of the following categories, you should be very concerned with your security: </p>
+    <ul>
+      <li>Is your data <b>valuable?</b> to others? (eg credit card information, personal data, etc).</li>
+      <li>Is your site <b>controversial</b> in any way? The web is a popular place for activists of all stripes to make their mark without getting out of their chairs.</li>
+      <li>Are you (or your site) just plain <b>famous?</b> Visbility = vulnerability, just like IRL.</li>
+    </ul>
+
+    <h3>Vulnerability vs Interactivity</h3>
+    <p>There is a direct relation to the amount of input you allow from users of your site, to the damage one of those users may cause. A site that is a completely non-interactive is highly secure, but less useful; while an interactive site allows far more opportunities for bad actors.</p>
+
+    <h3>What could happen?</h3>
+    <p>Here is a short list of some of the major attacks that can occur over the web:</p>
+    <ul>
+      <li>Cross Site Scripting (<b>XSS</b>) attacks will execute a script in a victim computer's browser.</li>
+      <li><b>Injection</b> attacks (which are typically exploted through SQL) occur when hositle data is used to trick a database interpreter into executing unwanted commands, or changing data.</li>
+      <li><b>Malicious file execution</b> is when an attacked inserts code that can later compromise the system. Consequences can be as serious as total server compromise.</li>
+    </ul>
+
+    <h3>Who do I have to pay to be secure?</h3>
+    <p>First, the bad news: there is no instant, complete way to become secure on the web. Just as no suit of armor is completely invulnerable, there will always be a new way to crack into a web site.</p>
+    <p>One bit of good news is that amongst the range of attacks made on web sites, very few are new. Most often, attackers will use known techniques, only only rarely will a new technique emerge. This means that if you can stay up-to-date with current security protocols (a topic out of reach of this post), you can re-attain a high level of security.
+
+    <p>While this was so very far from a complete coverage of this topic, I still hope you learned something. Thanks for reading, and come back around next week!.</p>
+
+  </main>
+
+  <footer>
+    <p>Questions? Comments? Concerns? <a href="mailto:whelpley@gmail.com">Email me</a></p>
+  </footer>
+
+</body>
+
+</html>
+
+<!--
+How was it to wireframe and create an HTML page with a pair?
+-Going through this process with a pair was useful in that we were able to check in with each other about the necessity of elements (ie: does this need a table now? nope!). Also very useful to have two brains for error-checking and looking up what tags do.
+
+
+Did you find wireframing to be helpful to your development process?
+-At our current level, I do not feel it is very useful, as it is easy to envision how a page will look from the code I develop for it. However, I do see how this will quickly become useful as a base skeletal reference when I start adding style elements and more complicated layouts.
+
+What did you and your pair decide made a good wireframe?
+-For this exercise, we decided to keep it as simple as possible, to respect both our current knowledge level and the time limit for the exercise. We had just 4 boxes, all in a column: page title, a navigation bar, the article text, and a footer with contact info.
+
+
+What new semantic elements did you learn about (if any) ?
+-I did not learn about any semantic elements for this exercise, but I did learn some structural ones:
+<nav> for the navigation bar section
+  <footer> for the contact info at the bottom
+    <article> for the main body
+
+-->
+
+</html>

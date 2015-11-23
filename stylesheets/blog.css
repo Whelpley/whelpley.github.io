@@ -40,3 +40,7 @@ main > p:first-of-type::first-letter {
 code {
   font-family: monospace;
 }
+
+q {
+  color: #284907;
+}
