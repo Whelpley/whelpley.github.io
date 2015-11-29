@@ -14,7 +14,7 @@ body {
 }
 
 /* nav bar */
-nav > ul {
+nav ul {
   list-style-type: none;
   border: 2px solid #382513;
   margin: 1em;
@@ -22,7 +22,7 @@ nav > ul {
 }
 
 /* get the nav bar in a horizontal line */
-nav > ul > li {
+nav ul li {
   display: inline;
   margin-left: 2em;
 }

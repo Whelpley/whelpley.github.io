@@ -15,7 +15,6 @@
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="../about.html">About</a></li>
-      <li><a href="#">Links</a></li>
       <li><a href="../projects/index.html">Projects</a></li>
       <li><a href="../contact.html">Contact</a></li>
     </ul>
@@ -77,7 +76,7 @@
     <p>I will take you through the above code step-by step:</p>
     <ul>
       <li>The new class is declared</li>
-      <li>The initialization step is set to accept one argument, and if that argument does not fit specifications, it raises an Argument Error.</li>
+      <li>The initialization step is set to accept one argument, and if that argument does not fit specifications, it raises an Argument Error, and the object is not created.</li>
       <li>If the argument passes spec, it sets the Instance Variable @charges. The instance variable differs from a local variable in that it is accessible across all instances of that class object, and may be used amongst the methods in its class, unlike a local variable, which is only usable in the space where it is defined.</li>
       <li>Then, I define just a method for the class called #charges_left, which will return the instance variable @charges.</li>
       <li>Finally, I give the class some power by defining another method, #magic_missle, which returns one of two strings, depending on the value of @charges.</li>
