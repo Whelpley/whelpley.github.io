@@ -15,7 +15,6 @@
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="../about.html">About</a></li>
-      <li><a href="#">Links</a></li>
       <li><a href="../projects/index.html">Projects</a></li>
       <li><a href="../contact.html">Contact</a></li>
     </ul>
@@ -54,10 +53,12 @@
 
      <p>The command "gets" will pause the execution of the program to get the user input, and then resumes, using the result of the input.</p>
     <p>Now, to implement this in JavaScript, things get funky. First off, the capability does not come pre-loaded into JS like with Ruby. Fortunately, by installing the package from <a href="https://github.com/flatiron/prompt">this project</a>, and adding two lines of code to associate files, you can acquire this capability, but care is required - it works much differently than Ruby.</p>
-    <p>Start my installing the package from the command line, in the directory you wish to use it:</p>
+    <p>Start by installing the package with the following code on the command line, in the directory you wish to use it:</p>
     <div class="snippet">
       <code>
+        <br>
         npm install prompt<br>
+        <br>
       </code>
     </div>
     <p>Now, let's try to implement the same code from above in JS:</p>
@@ -93,14 +94,7 @@
     </div>
 
     <p>That's not what we wanted - what went wrong is that the flow of the program execution occurrs differently in JS than Ruby. In Ruby, the commands will be executed in the order they appear in the program, while in JS there is a logic that dictates the leveled execution of commands, which is not tied to the order they appear in the file. All of the top-level commands are executed first, then the prompt is called, and then everything that results from the prompt is executed.</p>
-    <p>To tie up this discussion, I will correct the code to respect the control flow of JS:</p>
-
-    <div class="snippet">
-      <code>
-        npm install prompt<br>
-      </code>
-    </div>
-    <p>Now, let's try to implement the same code from above in JS:</p>
+    <p>Now, I will correct the code to respect the control flow of JS:</p>
     <div class="snippet">
       <h3>User input prompts in JavaScript</h3>
       <h5>Take two</h5>
