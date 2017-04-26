@@ -1,18 +1,239 @@
+
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
+  <title>Michael Whelpley</title>
+  <link rel="stylesheet" media="all" href="assets/stylesheet.css" data-turbolinks-track="true" />
+  <script src="assets/jquery_min.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="GNety/f/TvgBo/nxFGrwHnEKPSIDHlE88U54X5GtmROPJcb8LiF3j478jFECIkCy5KBVa5XE7oRRphDtirilPQ==" />
+    <link rel="icon" href="http://greenfrogtn.org/wp-content/themes/organic_portfolio_gray/images/favicon.ico">
 
-    <title>Michael Whelpley - Page under construction</title>
+    <meta name="description" content="software engineer mapping gis mapbox ruby on rails san francisco">
+    <meta name="author" content="Michael Whelpley">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/bootstrap-responsive.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
 
+    <style>
+      body { margin:0; padding:0; }
+
+      header{
+        padding-bottom:70%
+      }
+      .img-profile{
+        padding-top: 110px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      .section-label{
+        padding-top: 55px;
+        color: black;
+      }
+    </style>
 </head>
 
-<body id="page-top" class="index">
 
-<h1>Page under construction</h1>
-<h4>Nothing to see here, move along folks</h4>
+<body id="page-top" class="index">
+</head>
+<body>
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Welcome</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <img class="img-profile"  src="https://images.unsplash.com/photo-1441765287383-45077a2ffdce?crop=entropy&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1200" alt="">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <span class="name">Michael Whelpley</span>
+                        <hr class="star-primary">
+                        <span class="skills">Web Developer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+   <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-label">Portfolio</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="https://skylarkearth.herokuapp.com/" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <p class="caption-text">Skylark</p>
+                            </div>
+                        </div>
+                        <img src="http://i.imgur.com/KwqVxM9.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="description"> A social media app to share your imagery-based maps. Developed on a team of five engineers as a final project at Dev BootCamp in February 2016.</div>
+               </div>
+
+<!--To change - Chatbot-->
+                <div class="col-sm-4 portfolio-item">
+                    <a href="https://github.com/Whelpley/gethuman-chatbot" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <p class="caption-text">Chatbot for GetHuman</p>
+                            </div>
+                        </div>
+                        <img src="http://i.imgur.com/8IBSpu9.png" class="img-responsive" alt="">
+                    </a>
+                     <div class="description"> Chat interface allowing users to obtain assistance in resolving customer service issues with popular companies.</div>
+                </div>
+
+<!--To change - Placeholder for Audio app-->
+                
+                <div class="col-sm-4 portfolio-item">
+                    <a href="https://github.com/Whelpley/audio-fx-playground" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <p class="caption-text">Live Audio Transformer</p>
+                            </div>
+                        </div>
+                        <img src="http://i.imgur.com/67yvjKi.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="description"> A web site that allows users to hear transformed versions of their voice. Built in Aungular, employing the Web Audio API.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-label" style="color: white">About</h2>
+                    <hr class="star-primary">
+                    <img src="assets/mvw_headshot.jpg" class="profile-img" alt"">
+                </div>
+            </div>
+        </div>
+            <div class="row" style="padding-top: 20px; padding-bottom: 20px";>
+               <div class="col-lg-4 col-lg-offset-2">
+                    <p style="font-size:20px; padding-left: 25px; padding-right: 20px">I am a web developer who is passionate about mapping and environmental sustainability. I have experience in Ruby and JavaScript programming languages. My objective is to create technology that has a positive impact on people and the environment. </p>
+                </div>
+                <div class="col-lg-4">
+                    <p style="font-size:20px; padding-left: 25px; padding-right: 20px">Areas of interests include back end development, front end development, and data visualization.
+                    I'm looking for a fast-paced work place that presents a challenge. I learn quickly and thrive when confronted with a specific problem.</p>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 style="color:black" >Contact Me</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p style="font-size:100%">San Francisco, California</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://twitter.com/hellokarlaking"><img class="icon" src="https://cdn3.iconfinder.com/data/icons/social-circle/512/social_8-48.png" alt="" style="width:48px;height:48px;"></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/karlaking"><img class="icon" src="https://cdn0.iconfinder.com/data/icons/social-circle/595/github-48.png" alt="" style="width:48px;height:48px;"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/kingkarla"><img class="icon" src="https://cdn3.iconfinder.com/data/icons/social-circle/512/social_7-48.png" alt="" style="width:48px;height:48px;"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4" >
+                        <h3>Email</h3>
+                        <p style="font-size:100%" >karlaking2@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-12">
+                     Copyright &copy; Karla King 2016
+                 </div>
+             </div>
+         </div>
+        </div>
+    </footer>
+
+
+
 
 </body>
-
-
 </html>
