@@ -8831,17 +8831,26 @@ header .intro-text .name {
     display: block;
     text-transform: uppercase;
     font-family: "Exo";
-    font-size: 80px;
+    font-size: 100px;
     font-weight: 800;
     padding-top: 25%;
-    color: white;
+    color: #FFD700;
+    text-shadow: 2px 2px black;
+}
+
+header .intro-text {
+    color: #FFD700;
+    text-shadow: 2px 2px black;
 }
 
 header .intro-text .skills {
-    font-size: 1.25em;
+    font-size: 2.0em;
     font-weight: 300;
-    color: #fff;
+    color: #FFD700;
+    text-shadow: 2px 2px black;
 }
+
+
 
 @media(min-width:768px) {
     header .container {
